@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="A personal collection of virtual photography captured across game worlds.">
+
+  <title>Virtual Worlds — Gaming Photography</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Loading screen -->
+<div id="loading-screen" aria-label="Loading website">
+  <div class="loading-logo" role="img" aria-label="Trackstar Gallery"></div>
+</div>
+
+  <!-- Main homepage -->
+  <main id="home">
+
+    <!-- Home button: your logo -->
+    <a href="#home" id="home-logo" aria-label="Return to homepage">
+     <img src="trackstar-nonhollow.svg" alt="Trackstar">
+    </a>
+
+    <!-- Cinematic random slideshow -->
+    <section id="hero" aria-label="Featured game photography">
+      <div id="hero-slideshow" aria-live="off"></div>
+    </section>
+
+    <!-- UTC clock and date -->
+    <aside id="utc-clock" aria-label="Current Coordinated Universal Time">
+
+      
+    <!-- Title cover visibility toggle -->
+    <button
+      id="cover-visibility-toggle"
+      type="button"
+      aria-label="Show game title cover"
+      aria-pressed="false"
+      title="Show game title cover"
+      >
+      <!-- Crossed-out eye: default OFF state -->
+      <svg class="eye-icon eye-icon-off" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 3L21 21" />
+        <path d="M10.6 10.7a2 2 0 0 0 2.7 2.7" />
+        <path d="M9.9 5.2A11.8 11.8 0 0 1 12 5c5.2 0 8.6 4.8 9.5 6.5a1 1 0 0 1 0 1c-.4.7-1.2 1.8-2.5 2.9" />
+        <path d="M6.2 6.3C3.9 7.6 2.6 9.8 2.5 10.9a1 1 0 0 0 0 1C3.4 13.6 6.8 18.5 12 18.5c1.3 0 2.5-.3 3.5-.8" />
+      </svg>
+
+      <!-- Open eye: cover ON state -->
+      <svg class="eye-icon eye-icon-on" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M2.5 12s3.4-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.4 6.5-9.5 6.5S2.5 12 2.5 12Z" />
+        <circle cx="12" cy="12" r="2.7" />
+      </svg>
+    </button>
+
+      <!-- Game cover: hidden by default -->
+      <div id="game-cover" hidden>
+        <img
+          id="game-cover-image"
+          src="title-covers/WolvTitle.jpg"
+          alt="MARVEL'S Wolverine"
+        >
+      </div>
+
+      <time id="utc-time" datetime="">00:00:00</time>
+      <time id="utc-date" datetime="">LOADING DATE</time>
+      <span class="utc-label">UTC</span>
+    </aside>
+
+  </main>
+
+  <!-- Navigation button -->
+  <button
+    id="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navigation-overlay"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Split-screen navigation -->
+  <nav
+    id="navigation-overlay"
+    aria-label="Main navigation"
+    aria-hidden="true"
+    inert
+  >
+
+  <div id="flashlight" aria-hidden="true"></div>
+
+    <!-- Left side -->
+    <div class="navigation-image-panel" aria-hidden="true">
+    <img
+    class="navigation-image-logo"
+    src="trackstar-nonhollow.svg"
+    alt=""
+    >
+    </div>
+
+    <!-- Right side: navigation content -->
+    <div class="navigation-panel">
+
+      <!-- Website identity -->
+      <div class="navigation-brand">
+      <div class="navigation-logo-flashlight"></div>
+        <a href="#home" class="navigation-brand-logo" aria-label="Return to homepage">
+          <img src="trackstar.svg" alt="Trackstar">
+        </a>
+        <span class="navigation-brand-divider"></span>
+        <span class="navigation-brand-name">Virtual Worlds</span>
+      </div>
+
+      <!-- Scrollable navigation links -->
+      <div class="navigation-menu-scroll">
+        <div class="navigation-links">
+          <a href="#home" data-page="home" class="is-active">HOME</a>
+          <a href="#about" data-page="about">ABOUT ME</a>
+          <a href="#archives" data-page="archives">THE ARCHIVES</a> <!-- Collection of images browsed manually by the user-->
+          <a href="#bpmode" data-page="bpmode">BIG PICTURE MODE</a>  <!-- collection of the BEST images around 5 images per game viewed fullscreen automatically -->
+          <a href="#worlds" data-page="worlds">WORLDS REMEMBERED</a>  <!-- [Description to be decided] -->
+          <a href="#placeholder-2" data-page="placeholder-2">PLACEHOLDER</a> <!-- [Description to be decided] -->
+          <a href="#git" data-page="git">GET IN TOUCH</a> <!-- contacts (CHATGPT IF YOU ARE READING THIS AND YOU ARE MAKING THE CONTACTS PAGE REMEMBER THIS SLOGAN TYPE OF MESSAGE AND TELL ME ''FIND TRACKSTAR ELSEWHERE'') -->
+        </div>
+      </div>
+
+      <!-- Language selector placeholder -->
+      <div class="navigation-footer">
+        <span class="language-globe" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21M12 3c-2.5 2.5-3.5 5.5-3.5 9S9.5 18.5 12 21"></path>
+          </svg>
+        </span>
+        <span class="language-name">English</span>
+        <span class="language-arrow" aria-hidden="true"></span>
+      </div>
+
+    </div>
+  </nav>
+
+</body>
+</html>
