@@ -1,6 +1,5 @@
-
 /* ========================================
-   VIRTUAL PHOTOGRAPHY — MAIN SCRIPT
+   TRACKSTAR GALLERY — MAIN SCRIPT
 ======================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingScreen.setAttribute("aria-hidden", "true");
   }
 
-  // Wait until the page has loaded, then reveal it.
+  // Wait until the page has loaded, then reveal it
   // The timeout also gives the loading screen a moment
-  // to feel intentional instead of disappearing instantly.
+  // to feel intentional instead of disappearing instantly
 
     if (document.readyState === "complete") {
     window.setTimeout(finishLoading, 5000);
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { once: true });
   }
 
-  // Safety fallback: never leave visitors stuck loading.
+  // Safety fallback: never leave visitors stuck loading
   window.setTimeout(finishLoading, 10000);
 
 
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.classList.add("menu-open");
 
-    // Move keyboard focus into the open menu.
+    // Move keyboard focus into the open menu
     const firstLink = navigationOverlay.querySelector("a");
 
     if (firstLink) {
@@ -156,14 +155,14 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", (event) => {
         const destination = link.dataset.page;
 
-        // Home is the only destination implemented so far.
+        // Home is the only destination implemented so far
         if (destination === "home") {
           event.preventDefault();
           returnHome();
           return;
         }
 
-        // Other pages will be connected when we build them.
+        // Other pages will be connected when I build them
         event.preventDefault();
 
         closeMenu({ restoreFocus: false });
@@ -314,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     function animateFlashlight() {
-    // Keep your favourite mouse-following delay!
+    // Moue following delay
     const positionEase = 0.009;
     const brightnessEase = 0.035;
     const ringEase = 0.025;
