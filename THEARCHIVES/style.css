@@ -1,0 +1,218 @@
+/* ---------- ARCHIVES FOUNDATION ---------- */
+
+:root {
+  color-scheme: dark;
+  --color-background: #101014;
+  --color-text: #f4f0e9;
+  --color-muted: #aaa5b5;
+  --color-accent: #c6b4ff;
+  --page-padding: clamp(20px, 4vw, 64px);
+  --transition-smooth: 350ms ease;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+
+/* ---------- ARCHIVES HEADER ---------- */
+
+.archives-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0px var(--page-padding);
+  min-height: 150px;
+}
+
+.archives-logo img {
+  transform: translateX(25px);
+  display: block;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(13%) saturate(1044%) hue-rotate(211deg) brightness(103%) contrast(101%);
+}
+
+.archives-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archives-logo-flashlight {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 25px);
+  width: 240px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse 65px 65px at center,
+    rgba(220, 210, 255, 0.18) 0%,
+    rgba(190, 175, 255, 0.09) 35%,
+    rgba(155, 140, 225, 0.03) 65%,
+    transparent 100%
+  );
+
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.archives-divider {
+  width: 2px;
+  height: 20px;
+  flex-shrink: 0;
+  background: rgba(230, 222, 252, 0.65);
+}
+
+.archives-title {
+  color: #e6defc;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+
+/* ---------- ARCHIVES SELECTOR ---------- */
+
+.archives-selector {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+
+.archives-selector-active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 24px;
+  background: #fff;
+  color: #101014;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- GAMES SECTION ---------- */
+
+.archives-games {
+  padding: 50px var(--page-padding) 0;
+}
+
+.archives-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.archives-section-heading h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.archives-section-heading span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+
+  color: #e6defc;
+  background: #38365d;
+  border: none;
+  border-radius: 8px;
+
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* ---------- GAME CARDS ---------- */
+
+.archives-game-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  background: #1b1a22;
+}
+
+.archives-game-image {
+  position: absolute;
+  inset: 0;
+  background: #1b1a22;
+}
+
+.archives-game-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 20%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 16px;
+  background: rgba(16, 16, 24, 0.85);
+  color: #e6defc;
+}
+
+.archives-game-info h3 {
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.archives-game-info span {
+  color: rgba(230, 222, 252, 0.65);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.archives-game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.archives-game-card {
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+}
