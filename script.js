@@ -182,24 +182,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const images = [
     { src: "images/Horizon1.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
+    { src: "images/Horizon2.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
     { src: "images/Horizon3.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
-    { src: "images/Horizon4.2.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
+    { src: "images/Horizon4.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
     { src: "images/Horizon5.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
     { src: "images/Horizon6.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
     { src: "images/Horizon7.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
     { src: "images/Horizon8.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
     { src: "images/Horizon9.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
-    { src: "images/Horizon11.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
-    { src: "images/Horizon12.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
-    { src: "images/Horizon13.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
-    { src: "images/Horizon14.jpg", game: "Horizon", cover: "title-covers/HorizonTitle.jpg" },
 
     { src: "images/Wolverine1.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" },
     { src: "images/Wolverine2.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" },
     { src: "images/Wolverine3.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" },
+    { src: "images/Wolverine4.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" },
     { src: "images/Wolverine5.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" },
     { src: "images/Wolverine6.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" },
-    { src: "images/Wolverine7.1.jpg", game: "Wolverine", cover: "title-covers/WolvTitle.jpg" }
+
+    { src: "images/UFC6_1.jpg", game: "UFC 6", cover: "title-covers/ufcTitle.jpg" },
+    { src: "images/UFC6_2.jpg", game: "UFC 6", cover: "title-covers/ufcTitle.jpg" },
   ];
 
   let currentImageIndex = -1;
