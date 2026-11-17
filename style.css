@@ -36,7 +36,6 @@ body {
   overflow-x: hidden;
   background: var(--color-background);
   color: var(--color-text);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -152,13 +151,6 @@ background-image:
   pointer-events: none;
 }
 
-/* JavaScript can add this class when loading finishes. */
-#loading-screen.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 /* ---------- HOMEPAGE FOUNDATION ---------- */
 
 #home {
@@ -209,7 +201,7 @@ background-image:
   position: fixed;
   top: 30px;
   right: var(--page-padding);
-  z-index: 200;
+  z-index: 300;
 
   width: 48px;
   height: 48px;
@@ -332,7 +324,7 @@ background-image:
   display: grid;
   grid-template-columns: 60% 40%;
 
-  background: #15141d;
+  background: transparent;
   color: var(--color-text);
 
   opacity: 0;
@@ -425,6 +417,7 @@ background-image:
   object-fit: contain;
   transform: translateX(5px);
   filter: brightness(0) saturate(100%) invert(82%) sepia(13%) saturate(1044%) hue-rotate(211deg) brightness(103%) contrast(101%);
+  position: relative;
 }
 
 .navigation-brand-divider {
@@ -436,10 +429,6 @@ background-image:
 
 .navigation-brand-name {
   min-width: 0;
-}
-
-.navigation-brand-logo {
-  position: relative;
 }
 
 .navigation-logo-flashlight {
@@ -549,13 +538,12 @@ background-image:
   align-items: center;
   align-self: flex-start;
   flex-shrink: 0;
-  gap: 10px;
-
+  gap: 12px;
   padding-top: 75px;
-  color: #e6defc;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
 }
 
 .language-globe {
@@ -564,6 +552,8 @@ background-image:
   height: 20px;
   align-items: center;
   justify-content: center;
+  font-size: 27px;
+  line-height: 1;
 }
 
 .language-globe svg {
@@ -577,10 +567,8 @@ background-image:
 }
 
 .language-name {
-  font-size: 14px;
+  font-size: 15px;
 }
-
-
 
 .language-arrow {
   position: relative;
@@ -588,6 +576,9 @@ background-image:
   width: 12px;
   height: 10px;
   margin-left: 2px;
+  font-size: 23px;
+  line-height: 1;
+  transform: translateY(3px);
 }
 
 .language-arrow::before,
@@ -615,10 +606,6 @@ background-image:
 
 
 /* ---------- MENU BUTTON AND X ANIMATION ---------- */
-
-#menu-toggle {
-  z-index: 300;
-}
 
 body.menu-open #menu-toggle {
   top: 28px;
@@ -732,12 +719,6 @@ body.menu-open #home-logo {
 }
 
 /* The navigation screen stays independent of the flashlight */
-
-#navigation-overlay {
-  background: transparent;
-}
-
-
 /* Large, soft flashlight with an expanding hover glow */
 
 #flashlight {
@@ -763,33 +744,6 @@ body.menu-open #home-logo {
     display: none;
   }
 }
-
-
-.navigation-footer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--color-text);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-}
-
-.language-globe {
-  font-size: 27px;
-  line-height: 1;
-}
-
-.language-name {
-  font-size: 15px;
-}
-
-.language-arrow {
-  font-size: 23px;
-  line-height: 1;
-  transform: translateY(3px);
-}
-
 
 /* ---------- NAVIGATION ON SMALL SCREENS ---------- */
 
@@ -915,7 +869,7 @@ textarea {
     align-items: flex-start;
     gap: 3px;
     color: #fff;
-    pointer-events: none;
+    pointer-events: auto;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -924,6 +878,7 @@ textarea {
     line-height: 1;
     font-weight: 600;
     letter-spacing: 1.5px;
+    order: 2;
 }
 
 #utc-date {
@@ -971,8 +926,10 @@ textarea {
   aspect-ratio: 3 / 4;
   margin-bottom: 10px;
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
   border-radius: 8px;
+  order: 1;
+  flex-shrink: 0;
 }
 
 #game-cover-image {
@@ -984,10 +941,6 @@ textarea {
 
 
 /* ---------- GAME TITLE COVER TOGGLE ---------- */
-
-#utc-clock {
-  pointer-events: auto;
-}
 
 #cover-visibility-toggle {
   order: 0;
@@ -1046,16 +999,6 @@ textarea {
 /* The cover stays completely hidden until enabled */
 #game-cover[hidden] {
   display: none !important;
-}
-
-#game-cover {
-  order: 1;
-  flex-shrink: 0;
-  cursor: default;
-}
-
-#utc-time {
-  order: 2;
 }
 
 #utc-date {
