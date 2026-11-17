@@ -13,6 +13,14 @@
   --transition-smooth: 350ms ease;
 }
 
+/* ---------- RESET ---------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   margin: 0;
