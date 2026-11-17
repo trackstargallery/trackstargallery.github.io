@@ -13,6 +13,8 @@
 
 <body>
 
+  <div class="archives-mouse-light"></div>
+
   <!-- Archives header -->
   <header class="archives-header">
 
@@ -44,7 +46,7 @@
 
     <a href="#" class="archives-game-card">
       <div class="archives-game-image">
-        <!-- Horizon Zero Dawn screenshot goes here -->
+        <img src="title-headers/HorizonHeader.jpg" alt="Horizon Zero Dawn">
       </div>
       <div class="archives-game-info">
         <h3>Horizon Zero Dawn</h3>
@@ -54,17 +56,17 @@
 
     <a href="#" class="archives-game-card">
       <div class="archives-game-image">
-        <!-- Wolverine screenshot goes here -->
+        <img src="title-headers/WolvHeader.webp" alt="MARVEL'S Wolverine">
       </div>
       <div class="archives-game-info">
-        <h3>Marvel's Wolverine</h3>
+        <h3>MARVEL'S Wolverine</h3>
         <span>PHOTOGRAPHS</span>
       </div>
     </a>
 
     <a href="#" class="archives-game-card">
       <div class="archives-game-image">
-        <!-- UFC 6 screenshot goes here -->
+        <img src="title-headers/ufcHeader.webp" alt="UFC 6">
       </div>
       <div class="archives-game-info">
         <h3>UFC 6</h3>
@@ -75,6 +77,83 @@
   </div>
 
 </section>
+
+  <!-- Navigation button -->
+  <button
+    id="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="navigation-overlay"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Split-screen navigation -->
+  <nav
+    id="navigation-overlay"
+    aria-label="Main navigation"
+    aria-hidden="true"
+    inert
+  >
+
+    <div id="flashlight" aria-hidden="true"></div>
+
+    <!-- Left side: background -->
+    <div class="navigation-image-panel" aria-hidden="true">
+      <img
+        class="navigation-image-logo"
+        src="../trackstar-nonhollow.svg"
+        alt=""
+      >
+    </div>
+
+    <!-- Right side: navigation content -->
+    <div class="navigation-panel">
+
+      <!-- Website identity -->
+      <div class="navigation-brand">
+        <div class="navigation-logo-flashlight"></div>
+
+        <a href="../" class="navigation-brand-logo" aria-label="Return to homepage">
+          <img src="../trackstar.svg" alt="Trackstar">
+        </a>
+
+        <span class="navigation-brand-divider"></span>
+        <span class="navigation-brand-name">THE ARCHIVES</span>
+      </div>
+
+      <!-- Scrollable navigation links -->
+      <div class="navigation-menu-scroll">
+        <div class="navigation-links">
+          <a href="../" data-page="home">HOME</a>
+          <a href="#about" data-page="about">ABOUT ME</a>
+          <a href="./" class="is-active" aria-current="page">THE ARCHIVES</a>
+          <a href="#bpmode" data-page="bpmode">BIG PICTURE MODE</a>
+          <a href="#worlds" data-page="worlds">WORLDS REMEMBERED</a>
+          <a href="#unusual" data-page="unusual">UNUSUAL ENCOUNTERS</a>
+          <a href="#git" data-page="git">GET IN TOUCH</a>
+        </div>
+      </div>
+
+      <!-- Language selector -->
+      <div class="navigation-footer">
+        <span class="language-globe" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9S14.5 18.5 12 21M12 3c-2.5 2.5-3.5 5.5-3.5 9S9.5 18.5 12 21"></path>
+          </svg>
+        </span>
+
+        <span class="language-name">English</span>
+        <span class="language-arrow" aria-hidden="true"></span>
+      </div>
+
+    </div>
+  </nav>
+
 
 </body>
 </html>
